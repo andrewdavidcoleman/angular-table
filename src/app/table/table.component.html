@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<div class="container mat-elevation-z8">
+
+  <!-- <div class="header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div> -->
+
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="customer">
+      <mat-header-cell *matHeaderCellDef> Customer </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Drink Column -->
+    <ng-container matColumnDef="drink">
+      <mat-header-cell *matHeaderCellDef> Drink </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.drink}} </mat-cell>
+    </ng-container>
+
+    <!-- Main Column -->
+    <ng-container matColumnDef="main">
+      <mat-header-cell *matHeaderCellDef> Main </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.main}} </mat-cell>
+    </ng-container>
+
+    <!-- Side1 Column -->
+    <ng-container matColumnDef="side1">
+      <mat-header-cell *matHeaderCellDef> Side 1 </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.side1}} </mat-cell>
+    </ng-container>
+
+    <!-- Side2 Column -->
+    <ng-container matColumnDef="side2">
+      <mat-header-cell *matHeaderCellDef> Side 2 </mat-header-cell>
+      <mat-cell *matCellDef="let order"> {{order.side2}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
