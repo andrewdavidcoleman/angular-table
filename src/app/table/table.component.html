@@ -16,31 +16,31 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="customer">
-      <mat-header-cell *matHeaderCellDef> Customer </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Customer </mat-header-cell>
       <mat-cell *matCellDef="let order"> {{order.name}} </mat-cell>
     </ng-container>
 
     <!-- Drink Column -->
     <ng-container matColumnDef="drink">
-      <mat-header-cell *matHeaderCellDef> Drink </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Drink </mat-header-cell>
       <mat-cell *matCellDef="let order"> {{order.drink}} </mat-cell>
     </ng-container>
 
     <!-- Main Column -->
     <ng-container matColumnDef="main">
-      <mat-header-cell *matHeaderCellDef> Main </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Main </mat-header-cell>
       <mat-cell *matCellDef="let order"> {{order.main}} </mat-cell>
     </ng-container>
 
     <!-- Side1 Column -->
     <ng-container matColumnDef="side1">
-      <mat-header-cell *matHeaderCellDef> Side 1 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Side 1 </mat-header-cell>
       <mat-cell *matCellDef="let order"> {{order.side1}} </mat-cell>
     </ng-container>
 
     <!-- Side2 Column -->
     <ng-container matColumnDef="side2">
-      <mat-header-cell *matHeaderCellDef> Side 2 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Side 2 </mat-header-cell>
       <mat-cell *matCellDef="let order"> {{order.side2}} </mat-cell>
     </ng-container>
 

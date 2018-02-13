@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource, MatSort } from '@angular/material';
 import { BreakfastService } from './services/breakfast.service';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -24,6 +24,8 @@ export class TableComponent implements OnInit {
   dataSource = new OrderDataSource(this.breakfastService);
   displayedColumns = ['customer', 'drink', 'main', 'side1', 'side2'];
 
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(private breakfastService: BreakfastService) {  }
 
   ngOnInit() {
@@ -41,9 +43,3 @@ export class OrderDataSource extends DataSource<any> {
   }
   disconnect() {}
 }
-
-// export const ELEMENT_DATA: Element[] = [
-//   {planId: 1, planStatus: 7},
-//   {planId: 2, planStatus: 4},
-//   {planId: 3, planStatus: 2},
-// ];
